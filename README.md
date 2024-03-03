@@ -14,7 +14,7 @@ This is very simple and basic CLI video player written in Rust just for fun. it'
 ```sh
 # Clone repository and enter to cloned directory
 git clone https://github.com/UnknownRori/cli-video-player
-cd scarlet-project
+cd cli-video-player
 
 # Run the bad apple video
 cargo run --release -- -i ./bad-apple.mp4
