@@ -1,16 +1,11 @@
-use std::{
-    fs::{remove_file, File},
-    io::BufReader,
-    path::Path,
-};
+use std::fs::remove_file;
 
 use clap::Parser;
 use console::Term;
-use rodio::{Decoder, Sink};
 
 use crate::{
     args::Args,
-    audio::Audio,
+    // audio::Audio,
     ffmpeg::{Ffmpeg, Size},
     video::Video,
 };

@@ -14,6 +14,7 @@ pub struct Size {
 }
 
 impl Size {
+    #[allow(dead_code)]
     pub fn new(width: usize, height: usize) -> Self {
         Self { width, height }
     }

@@ -8,15 +8,16 @@ use console::Term;
 use rodio::{Decoder, Sink};
 
 use crate::{
-    audio::Audio,
+    // audio::Audio,
     ffmpeg::{Ffmpeg, Size},
     frame::{Frame, ReadyFrame},
 };
 
+#[allow(dead_code)]
 struct FPSLimiter {
-    target_fps: f32,
-    frame_duration: Duration,
-    last_frame_time: Instant,
+    pub target_fps: f32,
+    pub frame_duration: Duration,
+    pub last_frame_time: Instant,
 }
 
 impl FPSLimiter {
@@ -46,7 +47,7 @@ enum FrameState {
 }
 
 pub struct Video {
-    size: Size,
+    // size: Size,
     frames: FrameState,
 }
 
@@ -55,7 +56,7 @@ impl Video {
         let result = Ffmpeg::get_data(file, size)?;
 
         Ok(Self {
-            size: result.converted_size,
+            // size: result.converted_size,
             frames: FrameState::NotReady(result.frames),
         })
     }
